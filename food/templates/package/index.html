@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Choose Your Package</h1>
+    <p class="lead" style="margin-left: 75px; margin-right: 75px; margin-top: 15px; margin-bottom: 20px;">Quickly build an effective pricing table for your potential customers with this Bootstrap example.
+      It’s built with default Bootstrap components and utilities with little customization.</p>
+  </div>
+  
+  <div class="card-deck mb-9 text-center" style="margin-top: 30px;">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{packages1.name}}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">${{packages1.price}} <small class="text-muted">/ person</small></h1>
+        <div> {{packages1.item_list}} </div>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary mt-4">Order Now</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{packages2.name}}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">${{packages2.price}} <small class="text-muted">/ person</small></h1>
+        <div>{{packages2.item_list}}</div>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary mt-4">Order Now</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{packages3.name}}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">${{packages3.price}} <small class="text-muted">/ person</small></h1>
+          <div>{{packages3.item_list}}</div>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary mt-4">Order Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
