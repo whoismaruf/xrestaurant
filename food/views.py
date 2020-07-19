@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Item, Package
 # Create your views here.
 
+
 def food(request):
     items = [item for item in Item.objects.all()]
     data = {
